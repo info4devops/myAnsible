@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: I want to Install Webserver in myVM-Node-01 machine
+    apt:
+      name: apache2
+      state: present
+      
+
+
+      

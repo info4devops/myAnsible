@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install Git in myVM-Node-01 machine
+    apt:
+      name: git
+      state: present
+
+
+  - name: Install tree in myVM-Node-01 machine
+    apt:
+      name: tree
+      state: present
+

@@ -1,0 +1,19 @@
+---
+- mystudents:
+  - name: Ram
+    Phone Number: 9999999999
+    Address: 
+       Door Number: 1-42
+       Place: Hyd
+       Pincode: 123123
+
+  - name: Krishna
+    Phone Number: 8888888888
+    Address:
+       Door Number: 1-33
+       Place: Blr
+       Pincode: 333222
+
+
+
+
