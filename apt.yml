@@ -5,7 +5,7 @@
   tasks:
    - name: Ansible apt install NGINX
      apt:
-       name: NGINX
+       name: nginx 
        state: present
       
 
