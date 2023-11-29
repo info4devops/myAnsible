@@ -6,4 +6,4 @@
    - name: I want to install apache2 webserver on myVM-Node-01
      apt:
        name: apache2 
-       state: present
+       state: absent
