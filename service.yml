@@ -2,7 +2,6 @@
 - name: Playbook to Install webserver on myVM-Node-01 Machine
   hosts: all
   become: yes
-  gather_facts: yes
   tasks:
    - name: I want to install apache2 webserver on myVM-Node-01
      apt:
