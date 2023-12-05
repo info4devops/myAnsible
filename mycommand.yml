@@ -1,0 +1,7 @@
+---
+- hosts: 10.0.0.5
+  become: yes
+  tasks:
+  - name: I Want To Execute Linux Commands on myVM-Node-Ubuntu-01
+    Command: hostname -f 
+    
