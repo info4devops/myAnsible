@@ -1,9 +1,9 @@
 ---
-- name: Playbook to Install webserver on myVM-Node-01 Machine
+- name: Playbook to Install webserver on myVM-Node-UBUNTU Machine
   hosts: all
   become: yes
   tasks:
-   - name: I want to install apache2 webserver on myVM-Node-01
+   - name: I want to install apache2 webserver on myVM-Node-UBUNTU
      apt:
        name: apache2 
        state: absent

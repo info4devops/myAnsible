@@ -1,0 +1,36 @@
+---
+- name: Playbook to Install webserver on ansible ubuntu node
+  hosts: all
+  become: yes
+  tasks:
+# For Ubuntu Node
+   - name: I want to install apache2 webserver on ansible ubuntu node
+     apt:
+       name: apache2 
+       state: present
+     when: ansible_os_family=="Debian"
+
+   - name: I want to started apache2 webserver on ansible ubuntu node
+     service:
+       name: apache2 
+       state: started
+     when: ansible_os_family=="Debian"
+
+# for RedHat Node
+   - name: I want to install httpd webserver on ansible RedHat node
+     apt:
+       name: httpd 
+       state: present
+     when: ansible_os_family=="RedHat"
+
+   - name: I want to started httpd webserver on ansible RedHat node
+     service:
+       name: httpd 
+       state: started
+     when: ansible_os_family=="RedHat"
+
+
+
+
+      
+

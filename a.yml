@@ -1,0 +1,9 @@
+---
+- name: Setting up webserver
+  hosts: webservers
+  become: yes
+  tasks:
+   - name: I want to install apache2 webserver on node
+     apt:
+       name: '{{mywebpack}}' 
+       state: present
