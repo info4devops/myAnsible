@@ -1,0 +1,25 @@
+---
+- hosts: 10.0.0.5
+  become: yes
+  tasks:
+  - name: I Want To Execute Linux Commands on myVM-Node-Ubuntu-01
+    command: hostname -f 
+    register: myfirst_task_result
+
+  - name: I Want To Display 1st task result 
+    debug: 
+      msg: "{{myfirst_task_result}}"
+
+  - name: I want to install git
+    apt: 
+      name: git
+      state: present
+    when: myfirst_task_result.stderr !=""
+
+  - name: I want to install tree 
+    apt:
+      name: tree
+      state: present
+    when: myfirst_task_result.stderr ==""
+
+    
