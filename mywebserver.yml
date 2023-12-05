@@ -6,4 +6,5 @@
    - name: I want to install apache2 webserver on myVM-Node-UBUNTU
      apt:
        name: "{{mywebpack}}" 
-       state: absent
+       state: present
+       
