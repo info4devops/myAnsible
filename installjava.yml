@@ -1,0 +1,9 @@
+---
+- name: Playbook to Install Java on myVM-Node-UBUNTU Machine
+  hosts: mywebservers
+  become: yes
+  tasks:
+   - name: I want to install Java webserver on myVM-Node-UBUNTU
+     apt:
+       name: "{{myjavapackonubuntu}}" 
+       state: present
