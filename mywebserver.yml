@@ -5,5 +5,5 @@
   tasks:
    - name: I want to install apache2 webserver on myVM-Node-UBUNTU
      apt:
-       name: apache2 
+       name: "{{mywebpack}}" 
        state: absent
