@@ -3,5 +3,5 @@
   become: yes
   tasks:
   - name: I Want To Execute Linux Commands on myVM-Node-Ubuntu-01
-    Command: hostname -f 
-    
+    command: hostname -f 
+
