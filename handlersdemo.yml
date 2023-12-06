@@ -12,7 +12,7 @@
 
   handlers:
   - name: Restart Webserver
-    services:
+    service:
       name: apache2
       state: restart
 
