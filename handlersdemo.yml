@@ -5,7 +5,7 @@
   - name: Install Webserver Apache2
     apt: 
       name: apache2
-      state: present
+      state: absent
   
     notify:
     - Restart Webserver
