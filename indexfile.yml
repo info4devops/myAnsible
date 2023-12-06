@@ -1,0 +1,9 @@
+---
+- hosts: 10.0.0.5
+  become: yes
+  tasks:
+  - name: Copy index file into Node side
+    template: 
+      src: customindex.j2
+      dest: /var/www/html/index.html
+    
