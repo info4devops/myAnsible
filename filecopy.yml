@@ -1,0 +1,8 @@
+---
+hosts: 10.0.0.5
+become: yes
+tasks:
+- name: copy test file into node VM
+  copy:
+    src: mytestfile
+    dest: /home/vamsi/
