@@ -1,0 +1,19 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: Install Webserver Apache2
+    apt: 
+      name: Apache2
+      state: present
+  
+    notify:
+    - Restart Webserver
+
+  handlers:
+  - name: Restart Webserver
+    services:
+      name: apache2
+      state: restart
+
+
